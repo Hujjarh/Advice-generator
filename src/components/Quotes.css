@@ -1,0 +1,67 @@
+.quote-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 8em auto;
+}
+.quote-body{
+    box-shadow: 0px 3px 8px hsl(150, 100%, 66%);
+    border-radius: 8px;
+    /* background-color: hsl(217, 19%, 24%); */
+    color: hsl(217, 19%, 38%);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    height: 350px;
+    padding-bottom: 50px;
+}
+.quote-body .quotes h2{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+}
+.quote-body .advice-id h2{
+    font-size: 16px;
+    color: hsl(150, 100%, 66%);
+}
+.circle-button{
+    position: absolute;
+    bottom: -20px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsl(150, 100%, 66%);
+    transition: box-shadow 0.5s ease;
+}
+.circle-button:hover{
+    box-shadow: hsla(110, 80%, 95%, 0.3) 0px 8px 28px;
+    
+}
+.circle-button img{
+    background-color: hsl(150, 100%, 66%);
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+    .quote-body{
+        max-width: 400px;
+        max-height: auto;
+        font-size: 18px;
+    }
+    .quote-body .quotes{
+        /* background-color: red; */
+        margin-top: 20px;
+    }
+}
