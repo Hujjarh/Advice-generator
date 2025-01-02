@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import dice from '../assets/images/icon-dice.svg'
+import pattern_sep from '../assets/images/pattern-divider-desktop.svg'
 import './Quotes.css'
 
 const Quote = () => {
@@ -23,7 +24,7 @@ const Quote = () => {
         <div className="quote-body">
             <div className="advice-id">
                 {
-                    advice === false ? <h1>Press the dice to generate advice</h1> : 
+                    advice === false ? <p>Press the dice to generate advice</p> : 
                     advice && (
                         <div>
 
@@ -33,23 +34,20 @@ const Quote = () => {
                 }
             </div>
             <div className="quotes">
-            {
+                {
                     advice && (
                         <div>
-                            <h2>"{advice.slip.advice}"</h2>
+                            <p>"{advice.slip.advice}"</p>
                         </div>
                     )
                 }
             </div>
-            {/* <div className="horizontal-sep">
-                <hr />
-                <div><h1>''</h1></div>
-                <hr />
-                
-            </div> */}
+            <div className="pattern-sep">
+                <img src={pattern_sep} alt="" />
+            </div>
         </div>
         <div className="circle-button">
-            <img src={dice} alt="dice" onClick={handleAdvice}/>
+            <button onClick={handleAdvice} aria-label='dice to generate a random advice'><img src={dice} alt="dice" /></button>
            
         </div>
     </div>
