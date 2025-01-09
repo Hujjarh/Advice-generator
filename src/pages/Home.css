@@ -15,3 +15,8 @@
         }
     }
 }
+.footer{
+    display: flex;
+    justify-content: space-around;
+    color: hsl(217, 19%, 38%);;
+}

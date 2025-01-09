@@ -9,6 +9,10 @@ const Home = () => {
       <h1>Advice Generator App</h1>
       <Quote/>
     </main>
+    <footer className='footer'>
+      <div>&copy; 2025</div>
+      <div>Devloped by <strong>Hujjarh</strong></div>
+    </footer>
     </>
   )
 }
