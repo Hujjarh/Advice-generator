@@ -1,5 +1,4 @@
 .quote-container{
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,10 +7,10 @@
     margin: 8em auto;
 }
 .quote-body{
-    box-shadow: 0px 3px 8px hsl(150, 100%, 66%);
-    border-radius: 8px;
-    /* background-color: hsl(217, 19%, 24%); */
-    color: hsl(217, 19%, 38%);
+    position: relative;
+    /* box-shadow: 0px 3px 8px hsl(150, 100%, 66%); */
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -21,18 +20,24 @@
     height: 350px;
     padding-bottom: 50px;
 }
-.quote-body .quotes{
-    display: flex;
-    justify-content: center;
-    font-size: 28px;
-}
 .quote-body .advice-id h2{
     font-size: 16px;
     color: hsl(150, 100%, 66%);
 }
-.circle-button button{
+.quote-body .quotes{
+    font-size: 24px;
+    color: hsl(193, 38%, 86%);
+}
+.init-quote{
+    font-size: 24px;
+    color: hsl(193, 38%, 86%);
+}
+.quote-body .circle-button{
     position: absolute;
     bottom: -20px;
+}
+.circle-button button{
+    
     width: 45px;
     height: 45px;
     display: flex;
@@ -50,6 +55,11 @@
 .circle-button img{
     background-color: hsl(150, 100%, 66%);
 }
+.pattern-sep{
+    .mobile-sep{
+        display: none;
+    }
+}
 
 
 /* media queries */
@@ -63,8 +73,19 @@
         max-height: auto;
         font-size: 18px;
     }
-    .quote-body .quotes{
-        /* background-color: red; */
-        margin-top: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    .quote-body{
+        max-width: 300px;
+        padding-inline: 10px;
+    }
+    .pattern-sep{
+        .desktop-sep{
+            display: none;
+        }
+        .mobile-sep{
+            display: block;
+        }
     }
 }
