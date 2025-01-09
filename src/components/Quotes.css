@@ -34,12 +34,12 @@
 }
 .quote-body .circle-button{
     position: absolute;
-    bottom: -20px;
+    bottom: -25px;
 }
 .circle-button button{
     
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,10 +47,19 @@
     cursor: pointer;
     background-color: hsl(150, 100%, 66%);
     transition: box-shadow 0.5s ease;
+    animation: initial 1s;
 }
 .circle-button button:hover{
-    box-shadow: hsla(110, 80%, 95%, 0.3) 0px 8px 28px;
-    
+    box-shadow: hsla(110, 80%, 95%, 0.3) 0px 8px 28px;  
+    animation: rotate 1s;
+}
+
+@keyframes initial{
+    0% {transform: rotate(-180deg);}
+}
+
+@keyframes rotate{
+    100% {transform: rotate(180deg);}
 }
 .circle-button img{
     background-color: hsl(150, 100%, 66%);
